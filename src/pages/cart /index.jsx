@@ -2,7 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeCart } from "../../store/modules/cart /action";
 import { useHistory } from "react-router";
 import { RenderProduct } from "../../components/products";
-import { Menu } from "../home/style";
+import { Menu, HeaderStyled } from "./style";
+import { RiHome4Fill } from "react-icons/ri";
 
 export const Card = () => {
   const cardProducts = useSelector((state) => state.cartReducer);
@@ -11,18 +12,30 @@ export const Card = () => {
   const removeItem = (idToRemove) => {
     const remove = cardProducts.filter((product) => product.id !== idToRemove);
     dispatch(changeCart(remove));
-    console.log(cardProducts, "all");
+    // console.log(cardProducts, "all");
   };
 
   const history = useHistory();
   const goToStore = () => history.push("/");
 
   return (
-    <div>
-      <button onClick={goToStore}>Voltar para a loja</button>
+    <>
+      <HeaderStyled>
+        <h1>
+          Selaria Safira<i class="fas fa-hat-cowboy"></i>
+        </h1>
+        <button onClick={goToStore}>
+          <RiHome4Fill />
+          <span>Voltar Para a loja</span>
+        </button>
+      </HeaderStyled>
       <Menu>
-        <RenderProduct productsToRender={cardProducts} callback={removeItem} />;
+        <RenderProduct
+          productsToRender={cardProducts}
+          callback={removeItem}
+          buttonText="remove"
+        />
       </Menu>
-    </div>
+    </>
   );
 };

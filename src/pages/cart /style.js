@@ -29,12 +29,12 @@ export const HeaderStyled = styled.header`
     font-size:10px;
   }
   svg{
-    padding: 0;
     margin:0;
-  }
+  padding:0;
+}
 `;
 export const Menu = styled.article`
-  max-width: 100vw;
+  width: 100vw;
   max-height: 100vh;
   bacground-image: url(${background});
   background-repeat: repeat;
@@ -44,10 +44,9 @@ export const Menu = styled.article`
   overflow: auto;
 
   @media (min-width: 700px) {
-    overflow: initial;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 200vh;
   }
 `;
