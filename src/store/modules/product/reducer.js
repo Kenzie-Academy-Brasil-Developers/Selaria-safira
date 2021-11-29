@@ -47,20 +47,20 @@ const initialState = [
     nome: "Sela australiana",
     categoria: "Selas",
     preço: 1000,
-    img: "https://selasandrade.com.br/wp-content/uploads/2019/05/SELA-AUSTRALIANA-MANGALARGA-IN-COD-018.jpg",
+    img: "https://31004.cdn.simplo7.net/static/31004/sku/sela-sela-australiana-de-pista-profissional-top-12-mcs1286-1563559933131.jpg",
   },
   {
     id: 8,
     nome: "Rinete Loop jk",
     categoria: "Ferramentas",
-    preço: 1000,
+    preço: 150,
     img: "https://http2.mlstatic.com/D_NQ_NP_771288-MLB31498325619_072019-O.jpg",
   },
   {
     id: 9,
     nome: "Grosa excel legend",
     categoria: "Ferramentas",
-    preço: 1000,
+    preço: 200,
     img: "https://6849028l.ha.azioncdn.net/img/2021/09/produto/3484/1/large/grosa-excel-legend-mustad.jpg",
   },
 ];
