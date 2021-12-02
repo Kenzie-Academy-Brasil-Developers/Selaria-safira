@@ -3,10 +3,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeCart } from "../../store/modules/cart /action";
 import { RenderProduct } from "../../components/products";
-import { useHistory } from "react-router";
-import { HeaderStyled, Menu } from "./style";
-import { BsCart3 } from "react-icons/bs";
-import { FaHatCowboy } from "react-icons/fa";
+import { Menu } from "./style";
+import { StyledHeader } from "../../components/header";
 export const Home = () => {
   const [carrinhoItens, setCarrinhoItens] = useState([]);
   //Acessando redux da loja
@@ -24,21 +22,9 @@ export const Home = () => {
   };
   dispatch(changeCart(carrinhoItens));
 
-  const history = useHistory();
-  const goToCart = () => history.push("/cart");
   return (
     <>
-      <HeaderStyled>
-        <h1>
-          Selaria Safira
-          <FaHatCowboy />
-        </h1>
-        <button onClick={goToCart}>
-          <BsCart3 />
-          <span>carrinho</span>
-        </button>
-      </HeaderStyled>
-
+      <StyledHeader type="home" />
       <Menu>
         <RenderProduct
           productsToRender={allProducts}

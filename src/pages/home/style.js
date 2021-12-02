@@ -1,41 +1,9 @@
 import styled from "styled-components";
 import background from "../../assets/img/background.jpg";
 
-export const HeaderStyled = styled.header`
-  width: 100vw;
-  height: 8vh;
-  background-color: rgb(165, 94, 36,0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h1 {
-    margin: 0;
-    margin-left: 2.6%;
-    color: #efdbff;
-  }
-  button {
-    margin-right: 2.6%;
-    background-color: transparent;
-    border: 0;
-    color: white;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align-center;
-  }
-  span{
-    margin-top:2px;
-    font-size:10px;
-  }
-  svg{
-    padding: 0;
-    margin:0;
-  }
-`;
 export const Menu = styled.article`
   max-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
   bacground-image: url(${background});
   background-repeat: repeat;
   background-size: cover;
