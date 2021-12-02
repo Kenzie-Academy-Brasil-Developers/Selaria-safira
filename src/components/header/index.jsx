@@ -8,7 +8,6 @@ export const StyledHeader = ({ type }) => {
   const history = useHistory();
   const goToStore = () => history.push("/");
   const goToCart = () => history.push("/cart");
-  console.log(type);
   return (
     <HeaderStyled>
       <h1>

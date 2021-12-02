@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from "react-redux";
-import { changeCart } from "../../store/modules/cart /action";
 import { RenderProduct } from "../../components/products";
 import { Menu } from "./style";
 import { StyledHeader } from "../../components/header";
+import { addProductThunk } from "../../store/modules/cart /thunks";
 export const Card = () => {
   const cardProducts = useSelector((state) => state.cartReducer);
+  console.log(cardProducts);
 
   const dispatch = useDispatch();
   const removeItem = (idToRemove) => {
     const remove = cardProducts.filter((product) => product.id !== idToRemove);
-    dispatch(changeCart(remove));
+    dispatch(addProductThunk(remove));
   };
 
   return (
