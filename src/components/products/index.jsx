@@ -6,7 +6,6 @@ import {
   addProductThunk,
 } from "../../store/modules/cart /thunks";
 import { useSelector } from "react-redux";
-// import { toast, ToastContainer, Zoom, Bounce } from "react-toastify";
 
 export const RenderProduct = ({ type }) => {
   const dispatch = useDispatch();
@@ -42,11 +41,6 @@ export const RenderProduct = ({ type }) => {
               <BsCart3 />
             </button>
           </div>
-          {/* <ToastContainer
-            draggable={false}
-            transition={Zoom}
-            autoClose={8000}
-          /> */}
         </CardProduct>
       ));
 };
