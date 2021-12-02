@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router";
+import { Route, Switch } from "react-router-dom";
 import { Home } from "../pages/home";
 import { Card } from "../pages/cart ";
 export const Routes = () => {

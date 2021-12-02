@@ -4,8 +4,7 @@ import { Menu } from "./style";
 import { StyledHeader } from "../../components/header";
 import { addProductThunk } from "../../store/modules/cart /thunks";
 export const Card = () => {
-  const cardProducts = useSelector((state) => state.cartReducer);
-  console.log(cardProducts);
+  const cardProducts = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
   const removeItem = (idToRemove) => {

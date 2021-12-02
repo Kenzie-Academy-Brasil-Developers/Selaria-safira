@@ -2,7 +2,7 @@ import { HeaderStyled } from "./style";
 import { BsCart3 } from "react-icons/bs";
 import { FaHatCowboy } from "react-icons/fa";
 import { RiHome4Fill } from "react-icons/ri";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 export const StyledHeader = ({ type }) => {
   const history = useHistory();

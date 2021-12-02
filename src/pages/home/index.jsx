@@ -1,7 +1,6 @@
 //Esse componente armazena os componentes da loja, os manda para o redux, e renderiza os produtos na tela
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeCart } from "../../store/modules/cart /action";
 import { RenderProduct } from "../../components/products";
 import { Menu } from "./style";
 import { StyledHeader } from "../../components/header";
@@ -19,8 +18,8 @@ export const Home = () => {
     const newProduct = allProducts.find((product) => product.id === addId);
     setCarrinhoItens(newProduct);
     // }
+    dispatch(addProductThunk(carrinhoItens));
   };
-  dispatch(addProductThunk(carrinhoItens));
 
   return (
     <>
